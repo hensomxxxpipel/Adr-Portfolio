@@ -8,7 +8,7 @@ const projects = [
     description:
       "RA-Bot is an interactive chatbot powered by multiple Large Language Models (LLMs) to assist users across various topics and conversations. It features a simple and intuitive interface and provides multiple tabs optimized for different chatbot models, allowing users to easily switch models and compare responses.",
     image: "/projects/ra-bot.png",
-    tags: ["Python", "LLM", "Langchain", "Firebase", "Streamlit"],
+    tags: ["Python", "LLMs", "Langchain", "Firebase", "Streamlit"],
     link: "https://ra-bot-ver-1-1.streamlit.app/",
     github: "https://github.com/hensomxxxpipel/RA-BOT"
   },
