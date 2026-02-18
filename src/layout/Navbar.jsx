@@ -34,11 +34,11 @@ export const Navbar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-      isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
+      isScrolled ? "glass-strong py-3" : "bg-transparent border border-transparent py-5"
     }  z-50`}>
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
-          PM<span className="text-primary">.</span>
+          RA<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
@@ -54,7 +54,14 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button
+            size="sm"
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }}
+          >Contact Me</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,7 +85,14 @@ export const Navbar = () => {
               </a>
             ))}
             
-            <Button onClick={() => setIsMobileMenuOpen (false)}>
+            <Button
+              onClick={() => {
+                setIsMobileMenuOpen (false)
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth"
+                })
+              }}
+            >
               Contact Me
             </Button>
           </div>
